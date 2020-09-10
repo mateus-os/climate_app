@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Clima</string>
+    <string name="title_activity_main">Clima</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_consultar">Consultar</string>
+    <string name="title_atualizar">Atualizar</string>
+    <string name="title_inserir">Inserir</string>
+    <string name="title_apagar">Apagar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_consultar">Consultar</string>
+    <string name="btn_atualizar">Atualizar</string>
+    <string name="btn_inserir">Inserir</string>
+    <string name="btn_excluir">Excluir</string>
+    <string name="auto_municipio">Escolha um Município</string>
+    <string name="tv_id">ID:</string>
+    <string name="tv_max">max</string>
+    <string name="tv_min">min</string>
+    <string name="tv_sens">sensação</string>
+    <string name="tv_atual">atual</string>
+    <string name="tv_umidade">umidade</string>
+    <string name="tv_maxlb">Max:</string>
+    <string name="tv_minlb">Min:</string>
+    <string name="tv_senslb">Sensação:</string>
+    <string name="tv_atuallb">Atual:</string>
+    <string name="tv_umidadelb">Umidade:</string>
+    <string name="tvEstado">Selecione o estado:</string>
+    <string name="tvMunicipio">Selecione o município:</string>
+    <string name="m_resync">Resync</string>
+    <string name="m_set_ip">Set IP</string>
+</resources>

@@ -1,0 +1,263 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_consulta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.ConsultaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll0_upd"
+                android:layout_width="match_parent"
+                android:layout_height="12sp"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/pg_cons"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll0_upd"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Spinner
+                    android:id="@+id/spin_estado_upd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:spinnerMode="dialog"
+                    android:textSize="@dimen/fontSize" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_cidade_upd"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/auto_municipio" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll1_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_id"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:id="@+id/id_clima_upd"
+                    android:labelFor="@id/id_clima_upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/fontSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll2_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_maxlb"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:id="@+id/max_clima_upd"
+                    android:labelFor="@id/max_clima_upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="@dimen/fontSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll3_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_minlb"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:id="@+id/min_clima_upd"
+                    android:labelFor="@id/min_clima_upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="@dimen/fontSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll5_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll4_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_senslb"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:id="@+id/sens_clima_upd"
+                    android:labelFor="@id/sens_clima_upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="@dimen/fontSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll6_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll5_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_atual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_atuallb"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:id="@+id/atual_clima_upd"
+                    android:labelFor="@id/atual_clima_upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="@dimen/fontSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll7_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll6_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_umid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_umidadelb"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:id="@+id/umid_clima_upd"
+                    android:labelFor="@id/umid_clima_upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:imeOptions="actionSend"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="@dimen/fontSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll8_upd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll7_upd"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_atualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_atualizar" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

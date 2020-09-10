@@ -1,0 +1,331 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_consulta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.ConsultaFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll0"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="horizontal"
+                tools:ignore="SmallSp">
+
+                <ProgressBar
+                    android:id="@+id/pg_cons"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll0"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvEstado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/tvEstado"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:layout_gravity="center"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spin_estado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/fontSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll6"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_id"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/id_clima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:layout_weight="1"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll1.2"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/atual_clima"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="-5dp"
+                        android:textAlignment="center"
+                        android:textColor="#FFBF00"
+                        android:textSize="36sp"
+                        tools:text="25°C" />
+
+                    <TextView
+                        android:id="@+id/tv_atual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_atual"
+                        android:textAlignment="center"
+                        android:textColor="#FFBF00"
+                        android:textSize="@dimen/legendClima"
+                        android:layout_marginTop="@dimen/spaceText"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll3"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/min_clima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:textColor="#317bb9"
+                    android:textSize="@dimen/climasSize"
+                    tools:text="15°C" />
+
+                <TextView
+                    android:id="@+id/tv_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_min"
+                    android:textColor="#317bb9"
+                    android:textSize="@dimen/legendClima"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/umid_clima"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:textAlignment="center"
+                        android:textColor="#16f0cf"
+                        android:textSize="30sp"
+                        android:visibility="invisible"
+                        tools:text="80%" />
+
+                    <TextView
+                        android:id="@+id/tv_umid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_umidade"
+                        android:textAlignment="center"
+                        android:textColor="#16f0cf"
+                        android:textSize="@dimen/legendClima"
+                        android:layout_marginTop="@dimen/spaceText"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/max_clima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left"
+                    android:textAlignment="textEnd"
+                    android:textColor="#fa4747"
+                    android:textSize="@dimen/climasSize"
+                    tools:text="30°C" />
+
+                <TextView
+                    android:id="@+id/tv_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_max"
+                    android:textColor="#fa4747"
+                    android:textSize="@dimen/legendClima"
+                    android:layout_marginEnd="@dimen/margin_left"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll4"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/sens_clima"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textColor="#5fcf5f"
+                        android:textSize="@dimen/climasSize"
+                        tools:text="27ºC"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/tv_sens"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tv_sens"
+                        android:textAlignment="center"
+                        android:textColor="#5fcf5f"
+                        android:textSize="@dimen/legendClima"
+                        android:layout_marginTop="@dimen/spaceText"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/ll6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll5"
+                android:layout_marginTop="@dimen/space_margin"
+                android:orientation="horizontal">
+                <requestFocus />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_consultar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_consultar"
+                    android:textAlignment="center" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll1"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_cidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    android:hint="@string/auto_municipio"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:labelFor="@id/auto_cidade" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

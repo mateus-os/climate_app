@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_consultar"
+        android:icon="@drawable/icon_clima"
+        android:title="@string/title_consultar"
+        android:enabled="true"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/navigation_atualizar"
+        android:icon="@drawable/icon_upd"
+        android:title="@string/title_atualizar"
+        android:enabled="true"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/navigation_inserir"
+        android:icon="@drawable/icon_ins"
+        android:title="@string/title_inserir"
+        android:enabled="true"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/navigation_delete"
+        android:icon="@drawable/icon_del"
+        android:title="@string/title_apagar"
+        android:enabled="true"
+        app:showAsAction="always|withText" />
+
+</menu>
