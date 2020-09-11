@@ -1,4 +1,5 @@
-# Climate App
+<h1> <img src =https://raw.githubusercontent.com/mateus-os/climate_app/master/app/src/main/res/mipmap-hdpi/app_icon.png style="float:left;"> Climate App
+
 ### University project about distributed systems
 
 
