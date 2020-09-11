@@ -307,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
                         if(checked == radioDefault.getId()) {
                             muni.setURL("http://mtsde.sytes.net:9191/");
                         } else if(checked == radioLocal.getId()){
-                            muni.setURL("http://192.168.0.20:8080/");
+                            muni.setURL("http://192.168.0.100:8080/");
                         } else if(checked == radioCustom.getId()){
                             muni.setURL("http://"+etIpCustom.getText().toString()+"/");
                         }

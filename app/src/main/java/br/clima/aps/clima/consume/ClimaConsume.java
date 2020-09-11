@@ -58,9 +58,9 @@ public class ClimaConsume {
             i++;
             switch(i){
                 case 1:
-                    return getAllMunicipios("http://192.168.0.20:8080/");
+                    return getAllMunicipios("http://192.168.0.100:8080/");
                 case 2:
-                    return getAllMunicipios("http://192.168.25.20:8080/");
+                    return getAllMunicipios("http://192.168.25.100:8080/");
             }
         }
         return null;
